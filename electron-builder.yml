@@ -1,0 +1,41 @@
+appId: ai.suixu.desktop
+productName: 随序
+directories:
+  output: release
+files:
+  - out/**
+  - package.json
+extraResources:
+  - from: build/trayTemplate.png
+    to: trayTemplate.png
+mac:
+  category: public.app-category.productivity
+  icon: build/icon.png
+  target:
+    - target: dmg
+      arch:
+        - arm64
+  artifactName: Suixu-${version}-${arch}.${ext}
+  hardenedRuntime: false
+  gatekeeperAssess: false
+  extendInfo:
+    NSAppleEventsUsageDescription: 随序需要在你批准后访问邮件、日历和其他本地应用。
+    NSCalendarsFullAccessUsageDescription: 随序会读取并创建日历活动，以便完成你的任务。
+    NSRemindersFullAccessUsageDescription: 随序会读取并创建提醒事项，以便完成你的任务。
+    NSContactsUsageDescription: 随序会在你批准后读取联系人，协助完成日程和沟通任务。
+    NSMicrophoneUsageDescription: 随序使用麦克风进行语音输入。
+    NSSpeechRecognitionUsageDescription: 随序使用语音识别把你的话转成文字。
+    NSDesktopFolderUsageDescription: 随序在你授权后读取桌面文件。
+    NSDocumentsFolderUsageDescription: 随序在你授权后读取文稿文件。
+    NSDownloadsFolderUsageDescription: 随序在你授权后读取下载文件。
+  entitlementsInherit: build/entitlements.mac.plist
+dmg:
+  title: 随序 ${version}
+  contents:
+    - x: 140
+      y: 190
+      type: file
+    - x: 400
+      y: 190
+      type: link
+      path: /Applications

@@ -1,0 +1,28 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1024" height="1024" viewBox="0 0 1024 1024">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#8ab8ff"/>
+      <stop offset=".52" stop-color="#356df0"/>
+      <stop offset="1" stop-color="#1b46b8"/>
+    </linearGradient>
+    <radialGradient id="glow" cx=".28" cy=".18" r=".72">
+      <stop offset="0" stop-color="#ffffff" stop-opacity=".88"/>
+      <stop offset=".22" stop-color="#ffffff" stop-opacity=".14"/>
+      <stop offset="1" stop-color="#ffffff" stop-opacity="0"/>
+    </radialGradient>
+    <filter id="shadow" x="-30%" y="-30%" width="160%" height="160%">
+      <feDropShadow dx="0" dy="34" stdDeviation="32" flood-color="#12358f" flood-opacity=".32"/>
+    </filter>
+  </defs>
+  <rect width="1024" height="1024" rx="240" fill="url(#bg)"/>
+  <rect width="1024" height="1024" rx="240" fill="url(#glow)"/>
+  <g fill="none" stroke="#ffffff" stroke-width="11" opacity=".48" filter="url(#shadow)">
+    <ellipse cx="512" cy="512" rx="390" ry="168" transform="rotate(-32 512 512)"/>
+    <ellipse cx="512" cy="512" rx="172" ry="382" transform="rotate(-32 512 512)"/>
+  </g>
+  <g fill="#ffffff">
+    <circle cx="203" cy="652" r="18" opacity=".8"/>
+    <circle cx="807" cy="367" r="12" opacity=".62"/>
+  </g>
+  <text x="512" y="588" fill="#ffffff" text-anchor="middle" font-family="Songti SC, STSong, serif" font-size="172" font-weight="700">序</text>
+</svg>

@@ -1,0 +1,48 @@
+{
+  "name": "suixu",
+  "version": "0.1.0",
+  "description": "随序 - 本地个人 AI Agent",
+  "main": "./out/main/index.js",
+  "author": "Suixu",
+  "license": "UNLICENSED",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "electron-vite dev",
+    "start": "electron-vite preview",
+    "build": "electron-vite build",
+    "typecheck": "tsc --noEmit -p tsconfig.node.json && tsc --noEmit -p tsconfig.web.json",
+    "test": "vitest run",
+    "test:watch": "vitest",
+    "icons": "node scripts/generate-icons.mjs",
+    "dist:mac": "pnpm build && electron-builder --mac dmg --arm64"
+  },
+  "dependencies": {
+    "cheerio": "^1.1.2",
+    "date-fns": "^4.1.0",
+    "docx": "^9.5.1",
+    "exceljs": "^4.4.0",
+    "lucide-react": "^0.468.0",
+    "playwright-core": "^1.55.0",
+    "react": "^19.1.1",
+    "react-dom": "^19.1.1",
+    "react-markdown": "^10.1.0",
+    "remark-gfm": "^4.0.1",
+    "sql.js": "^1.13.0",
+    "zod": "^4.1.5",
+    "zustand": "^5.0.8"
+  },
+  "devDependencies": {
+    "@types/node": "^24.3.0",
+    "@types/react": "^19.1.12",
+    "@types/react-dom": "^19.1.9",
+    "@types/sql.js": "^1.4.10",
+    "@vitejs/plugin-react": "^5.0.2",
+    "electron": "^37.3.1",
+    "electron-builder": "^26.0.12",
+    "electron-vite": "^4.0.0",
+    "typescript": "^5.9.2",
+    "vite": "^7.1.4",
+    "vitest": "^3.2.4"
+  }
+}
