@@ -164,12 +164,7 @@ Apple 本地连接器和随序浏览器可直接使用。Google Workspace、Meta
 
 ## 参与开发
 
-提交问题或改进前，请先运行：
+提交问题：549332979@qq.com
 
-```bash
-pnpm typecheck
-pnpm test
-pnpm build
-```
 
 请勿在 Issue、测试数据或截图中提交真实 API Key、Cookie、邮件地址或其他个人敏感信息。
